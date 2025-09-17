@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Pirata</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/Logo Music.jpg" alt="logo">
+      <span>MUSIC</span>
+    </div>
+
+    <div class="search-bar">
+      <img src="img/Casa Teste.png" alt="Casa" class="Casa">
+      <input type="text" placeholder="O que você quer ouvir?">
+    </div>
+
+    <nav>
+      <a href="suporte.html">Suporte</a>
+      <a href="baixar.html">Baixar</a>
+      <a href="Inscrever-se.html">Inscrever-se</a>
+      <button>Entrar</button>
+    </nav>
+  </header>
+  <title>Músicas e Artistas</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #264b4b;
+          color: #fff;
+          margin: 0;
+          padding: 20px;
+      }
+
+      h2 {
+          margin-top: 40px;
+          margin-bottom: 20px;
+      }
+
+      .musicas-alta, .artistas-populares {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+
+      .musica, .artista {
+          text-align: center;
+      }
+
+      .musica img, .artista img {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      }
+
+      .musica p, .artista p {
+          margin: 5px 0 0;
+          font-size: 14px;
+      }
+
+      .musica p.artista-info {
+          color: #ccc;
+          font-size: 12px;
+      }
+
+      .artista img {
+          border-radius: 50%;
+          width: 120px;
+          height: 120px;
+      }
+
+      
+
+  </style>
+
+</head>
+<body>
+
+  <h2>Músicas em Alta</h2>
+  
+  <div class="musicas-alta">
+      <div class="musica">
+          <img src="img/Death Row - pag 1.jpg" alt="Death Row" onclick="playMusic('Death Row')">▶ Play</button>
+          <p>Death Row</p>
+          <p class="artista-info">WALT • 1984 • 1 música, 1min 23 s</p>
+      </div>
+      <div class="musica">
+          <img src="img/Pagode - pag 1.jpg" alt="Fundamental" onclick="playMusic('Fundamental')">▶ Play</button>
+          <p>Fundamental</p>
+          <p class="artista-info">SAMBA DE RAIZ • 2013 • 1 música, 45min 24 s</p>
+      </div>
+      <div class="musica">
+          <img src="img/Funk - pag 1.jpg" alt="Os Pé na Porta" onclick="playMusic('Os Pé na Porta')">▶ Play</button>
+          <p>Os Pé na Porta</p>
+          <p class="artista-info">LOVE FUNK • 2024 • 1 música, 1min 49 s</p>
+      </div>
+      <div class="musica">
+          <img src="img/Bando - pag 1.jpg" alt="Bando" onclick="playMusic('Bando')">▶ Play</button>
+          <p>Bando</p>
+          <p class="artista-info">RECAYD MOB • 2021 • 1 música, 2min 19 s</p>
+      </div>
+      <div class="musica">
+          <img src="img/Kyan - pag 1.jpg" alt="Mlk Mandrake" onclick="playMusic('Mlk Mandrake')">▶ Play</button>
+          <p>Mlk Mandrake</p>
+          <p class="artista-info">KYAN • 2019 • 1 música, 1min 19 s</p>
+      </div>
+  </div>
+
+  <audio id="Death Row" src="audio/Death Row Legacy.mp3"></audio>
+  <audio id="Fundamental" src="audio/Let's Meet Up Tonight.mp3"></audio>
+  <audio id="Os Pé na Porta" src="audio/Cê sumiu no vento, tipo dado que apaga.mp3"></audio>
+  <audio id="Bando" src="audio/🎵 Title_ Codes & Ghosts.mp3"></audio>
+  <audio id="Mlk Mandrake" src="audio/🎵 Título_ Códigos e Fantasmas Funk do .mp3"></audio>
+
+  <script>
+    let currentAudio = null;
+
+    function playMusic(id) {
+      // Se já tem uma música tocando, pausa
+      if (currentAudio && !currentAudio.paused) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+      
+      // Pega o áudio clicado
+      const audio = document.getElementById(id);
+      audio.play();
+      currentAudio = audio;
+    }
+  </script>
+
+  <h2>Artistas Populares</h2>
+  <div class="artistas-populares">
+      <div class="artista">
+          <img src="img/2Pac - pag 1.jpg" alt="Tupac Shakur">
+          <p>Tupac Shakur</p>
+      </div>
+      <div class="artista">
+          <img src="img/Djonga - pag 1.jpg" alt="Djonga">
+          <p>Djonga</p>
+      </div>
+      <div class="artista">
+          <img src="img/Kyan - pag 1.jpg" alt="Kyan">
+          <p>Kyan</p>
+      </div>
+      <div class="artista">
+          <img src="img/Veigh - pag 1.jpg" alt="Veigh">
+          <p>Veigh</p>
+      </div>
+      <div class="artista">
+          <img src="img/Yunk vino - pag 1.jpg" alt="Yunk Vino">
+          <p>Yunk Vino</p>
+      </div>
+  </div>
+
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #2c4f4a;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h2 {
+        margin-top: 40px;
+    }
+
+    .album-container, .charts-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .album, .chart {
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .album img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .album-title {
+        margin-top: 8px;
+        font-weight: bold;
+    }
+
+    .album-info {
+        font-size: 12px;
+        color: #ccc;
+    }
+
+    .chart {
+        width: 150px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 8px;
+    }
+
+    .chart p {
+        margin: 2px 0;
+        font-size: 14px;
+    }
+
+    .top-ano { background-color: #a020f0; }
+    .top-brasil { background-color: #5a2b2a; }
+    .top-global { background-color: #7070ff; }
+    .top50-brasil { background-color: #ff1a75; }
+    .viral-brasil { background-color: #ff7f50; }
+
+</style>
+</head>
+<body>
+<h2>Álbuns que todos gostam</h2>
+<div class="album-container">
+    <div class="album">
+        <img src="img/Lil Nas.jpg" alt="Lil Nas">
+        <div class="album-title">LIL NAS</div>
+        <div class="album-info">NAS · 2013 · 11 músicas</div>
+    </div>
+    <div class="album">
+        <img src="img/TRAP THE FATO.jpg" alt="Trap the Fato">
+        <div class="album-title">TRAP THE FATO</div>
+        <div class="album-info">DEREK · 2025 · 9 músicas</div>
+    </div>
+    <div class="album">
+        <img src="img/ATMOSFERA.jpg" alt="Atmosfera">
+        <div class="album-title">ATMOSFERA</div>
+        <div class="album-info">HUNGRIA · 2015 · 10 músicas</div>
+    </div>
+    <div class="album">
+        <img src="img/REAL GANG.jpg" alt="Real Gang">
+        <div class="album-title">REAL GANG</div>
+        <div class="album-info">N.W.A · 1994 · 15 músicas</div>
+    </div>
+    <div class="album">
+        <img src="img/SOMOS IGUAIS.jpg" alt="Somos Iguais">
+        <div class="album-title">SOMOS IGUAIS</div>
+        <div class="album-info">MENDES · 2001 · 13 músicas</div>
+    </div>
+</div>
+
+<h2>Paradas em destaques</h2>
+<div class="charts-container">
+    <div class="chart top-ano">
+        <p>Top</p>
+        <p>Músicas do Ano</p>
+        <p>Paradas Musicais da Semana</p>
+    </div>
+    <div class="chart top-brasil">
+        <p>Top</p>
+        <p>Músicas Brasil</p>
+        <p>Paradas Musicais do Brasil</p>
+    </div>
+    <div class="chart top-global">
+        <p>Top 50</p>
+        <p>Global</p>
+    </div>
+    <div class="chart top50-brasil">
+        <p>Top 50</p>
+        <p>Brasil</p>
+    </div>
+    <div class="chart viral-brasil">
+        <p>Viral 50</p>
+        <p>Brasil</p>
+    </div>
+</div>
+
+<footer style="background-color: #2F4F4F; color: white; padding: 20px; text-align: center;">
+    <p>© 2025 E-Music. Todos os direitos reservados.</p>
+    <p>
+      <a href="#" style="color: white; text-decoration: none; margin: 0 10px;">Termos de Uso</a> |
+      <a href="#" style="color: white; text-decoration: none; margin: 0 10px;">Política de Privacidade</a> |
+      <a href="#" style="color: white; text-decoration: none; margin: 0 10px;">Contato</a>
+    </p>
+  </footer>
+  
+  
+
+</body>
+</html>
+

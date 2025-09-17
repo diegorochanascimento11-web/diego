@@ -1,0 +1,173 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2e5e5e;
+  color: white;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4a7d7d;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logo img {
+  width: 30px;
+  margin-right: 8px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+.search-bar img.Casa {
+  width: 25px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px 15px;
+  border: 1px solid black;
+  border-radius: 25px;
+  outline: none;
+}
+
+
+
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  padding: 0 10px;
+}
+
+nav a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 1px;
+  background: white;
+}
+
+nav button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+
+section {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+
+
+.musicas {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 180px;
+  text-align: center;
+}
+
+.card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin: 8px 0 4px;
+}
+
+.card p {
+  font-size: 12px;
+  color: #9c9c9c;
+}
+
+
+.artistas {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.artistas div {
+  text-align: center;
+}
+
+.artistas img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.artistas p {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.charts-container p {
+  text-align: center;
+  font-size: 12px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer a {
+  margin-top: 2px;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+}
